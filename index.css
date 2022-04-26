@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+:root{
+    --very-dark-blue-main-bg: hsl(233, 47%, 7%);
+    --dark-desaturated-blue-card-background: hsl(244, 38%, 16%);
+    --soft-violet-accent: hsl(277, 64%, 61%);
+    --white-main-heading-and-stats: hsl(0, 0%, 100%);
+    --slightly-transparent-white-main-paragraph: hsla(0, 0%, 100%, 0.75);
+    --slightly-transparent-white-stat-and-headings: hsla(0, 0%, 100%, 0.6);
+}
+
+body{
+    background-color: var(--very-dark-blue-main-bg);
+    color: var(--white-main-heading-and-stats);
+}
+
+.card{
+    display: flex;
+    height: 445px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 170px;
+}
+.left-card{
+    height: 445px;
+    width: 570px;
+    border-radius: 5px 0px 0px 5px;
+    background-color: var(--dark-desaturated-blue-card-background);
+    
+}
+
+.left-card h1 {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    margin: 85px 75px 28px 75px;
+}
+
+.left-card h1 span {
+    color: var(--soft-violet-accent);
+}
+
+.left-card p {
+    font-family: "Inter", sans-serif;
+    text-align: left;
+    margin: 0px 75px;
+    padding: 0px 70px 0px 0px;
+    font-weight: 400;
+    color: var(--slightly-transparent-white-stat-and-headings) !important;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+.left-card ul {
+    list-style: none;
+    display: flex;
+    margin-top: 35px !important;
+    margin-left: 35px !important;
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 400;
+}
+.left-card ul li h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    margin-left: 0px;
+}
+
+.left-card ul li p {
+    margin: 0px !important;
+    padding: 0px 70px 0px 0px!important;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 13px !important;
+    color: var(--slightly-transparent-white-stat-and-headings) !important;
+}
+.right-card {
+    height: 445px;
+    width: 540px;
+    border-radius: 0px 5px 5px 0px;
+    background-image: url(./images/image-header-desktop.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.right-card::after{
+    background-color: #550081;
+    border-radius: 0px 5px 5px 0px;
+    content: '';
+    opacity: 0.5;
+    position: absolute;
+    height: 445px;
+    width: 540px;
+}
+.image{
+    height: 445px;
+    width: 540px;
+    background-color: var(--soft-violet-accent);
+    opacity: 0.1;
+    mix-blend-mode: difference;
+    border-radius: 0px 5px 5px 0px;
+    position: absolute;
+}
+
+.attribution {
+    margin-top: 20px;
+    font-size: 13px;
+    text-align: center;
+
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 768px) {
+    body{
+        padding: 20px;
+        padding-top: 100px;
+        width: 350;
+        flex-direction: column !important;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card{
+        display: block;
+    }
+
+    .left-card {
+        width: 300px;
+        margin-top: 30px;
+        text-align: center;
+        border-radius: 0px 0px 10px 10px ;
+        margin-bottom: 20px;
+    }
+
+    .left-card h1 {
+        margin: 25px;
+        margin-top: 70px !important;
+        font-size: 24px;
+    }
+
+    .left-card p {
+        margin: 0px 50px;
+        padding: 0px !important;
+        justify-content: center;
+        text-align: center;
+        font-size: 13px;
+    }
+
+    .left-card ul {
+        display: block !important;
+        text-align: center;
+        margin:  0px !important;
+        padding: 0px !important;
+        justify-content: space-between;
+    }
+    
+    .left-card ul li h2 {
+        font-size: 17px !important;
+        margin:  0px !important;
+        padding: 0px !important;
+        margin-top: 20px !important;
+    }
+    .left-card ul li p {
+        font-size: 10px !important;
+        padding: 0px !important;
+        margin-bottom: 20px !important;
+    }
+
+
+    .right-card {
+        width: 300px;
+        height: 200px;
+        margin-top: -665px !important;
+        margin-right: 4px;
+        border-radius: 5px 5px 0px 0px !important;
+        background-image: url('./images/image-header-mobile.jpg');  
+    } 
+    
+    .right-card::after{
+        width: 300px;
+        height: 200px;
+    }
+    .image{
+        width: 300px;
+        height: 200px;
+        border-radius: 5px 5px 0px 0px !important;
+    }
+
+
+}
